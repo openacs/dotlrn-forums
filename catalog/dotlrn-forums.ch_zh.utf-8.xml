@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message_catalog package_key="dotlrn-forums" package_version="0.1a" locale="ch_zh" charset="utf-8">
+
+  <msg key="Forum">讨论版</msg>
+  <msg key="lt_Group_members_are_aut">群组成员自动定阅</msg>
+  <msg key="lt_Group_members_are_not">群组成员没有自动定阅</msg>
+  <msg key="lt_There_should_be_only_">应该只有一个讨论版的实体,这样便于管理</msg>
+  <msg key="New_Forum">新讨论版</msg>
+  <msg key="No_Postings">没有文章发表</msg>
+  <msg key="Posted">发表了</msg>
+  <msg key="Posting_History">发表文章的历史</msg>
+  <msg key="Subject">主题</msg>
+  <msg key="subscribe_group_members">定阅它们</msg>
+</message_catalog>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message_catalog package_key="dotlrn-forums" package_version="0.1a" locale="ru_RU" charset="utf-8">
+
+  <msg key="by_Date">по Дате</msg>
+  <msg key="by_Forum">по Конференции</msg>
+  <msg key="Forum">Конференция</msg>
+  <msg key="forums_default_name_suffix">Форум</msg>
+  <msg key="lt_Forums_Posting_histor">Конференция: Хронология сообщений %user.full_name%</msg>
+  <msg key="lt_Group_members_are_aut">Члены группы подписываются автоматически</msg>
+  <msg key="lt_Group_members_are_not">Члены группы не подписываются автоматически</msg>
+  <msg key="lt_There_should_be_only_">Нужна всего одна виртуальная копия Форумов, для целей администрирования</msg>
+  <msg key="New_Forum">Новый форум</msg>
+  <msg key="No_Postings">Нет сообщений</msg>
+  <msg key="Posted">Послано</msg>
+  <msg key="Posting_History">Хронология</msg>
+  <msg key="Posting_history_for">Хронология</msg>
+  <msg key="Subject">Предмет</msg>
+  <msg key="subscribe_group_members">подписать их</msg>
+  <msg key="unsubscribe_group_members">отписать их</msg>
+  <msg key="View">Показать:</msg>
+</message_catalog>
