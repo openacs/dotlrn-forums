@@ -19,7 +19,7 @@
 %>
 
 <ul>
-<li><a href="@url@">#dotlrn-forums.all_Forums#</a> (<a href="@url@admin/">#dotlrn-forums.administer#</a>)</li>
+<li><a href="@url@">#dotlrn-forums.All_forums#</a> (<a href="@url@admin/">#dotlrn-forums.administer#</a>)</li>
 <multiple name="forums">
   <li>
     <a href="@url@admin/forum-edit?forum_id=@forums.forum_id@">@forums.name@</a>
