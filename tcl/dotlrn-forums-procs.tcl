@@ -225,13 +225,17 @@ namespace eval dotlrn_forums {
 
         # Set up notifications for all the forums that have set for autosubscription
 
-        db_foreach select_forums {} {
+        set type_id [notification::type::get_type_id -short_name forums_forum_notif]
+        set interval_id [notification::get_interval_id -name instant]
+        set delivery_method_id [notification::get_delivery_method_id -name email]
+
+        foreach forum_id [db_list select_forums {}] {
             notification::request::new \
-                -type_id [notification::type::get_type_id -short_name forums_forum_notif] \
+                -type_id $type_id \
                 -user_id $user_id \
                 -object_id $forum_id \
-                -interval_id [notification::get_interval_id -name instant] \
-                -delivery_method_id [notification::get_delivery_method_id -name email]
+                -interval_id $interval_id \
+                -delivery_method_id $delivery_method_id
         }
 
     }
