@@ -151,4 +151,21 @@ end;' language 'plpgsql';
 select inline_0();
 drop function inline_0();
 
+-- DRB: This is a bit of a hack but I can't really think of any reason why the dotlrn forums
+-- applet should be forbidden from altering the forums table to track whether or not the
+-- forum is an autosubscribe forum.  We don't want to modify the forums package itself
+-- because autosubscription is very much a dotLRN feature inherited from SSV1.
+
+-- An alternative would be to create an acs relationship to track which forums users should
+-- be autosubscribed to, but each relationship is an object.  This is a heavyweight way to
+-- accomplish something simple.
+
+-- JCD: postgres won't let us do this all as one step like oracle will...
+alter table forums_forums add autosubscribe_p                 char(1)
+                                     constraint forums_autosubscribe_p_ck
+                                     check (autosubscribe_p in ('t','f'));
+update forums_forums set autosubscribe_p = 'f' 
+ where autosubscribe_p is null;
+alter table forums_forums alter column autosubscribe_p  SET DEFAULT 'f';
+
 \i dotlrn-forums-admin-portlet-create.sql
