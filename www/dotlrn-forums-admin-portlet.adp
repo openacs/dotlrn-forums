@@ -23,12 +23,12 @@
   <li>
     <a href="@url@admin/forum-edit?forum_id=@forums.forum_id@">@forums.name@</a>
 <if @forums.enabled_p@ ne t><b>(disabled)</b></if>
-<if @forums.autosubscribe_p@ true> Group members are autosubscribed | <a href="@dotlrn_url@/unsubscribe-members?@forums.query_vars@">unsubscribe them</a> </if>
-<else> Group members are not autosubscribed | <a href="@dotlrn_url@/subscribe-members?@forums.query_vars@">subscribe them</a> </else>
+<if @forums.autosubscribe_p@ true> #dotlrn-forums.lt_Group_members_are_aut# | <a href="@dotlrn_url@/unsubscribe-members?@forums.query_vars@">#dotlrn-forums.unsubscribe_group_members#</a> </if>
+<else> #dotlrn-forums.lt_Group_members_are_not# | <a href="@dotlrn_url@/subscribe-members?@forums.query_vars@">#dotlrn-forums.subscribe_group_members#</a> </else>
   </li>
 </multiple>
   <br>
   <li>
-    <a href="@url@admin/forum-new?name=@encoded_default_name@">New Forum</a>
+    <a href="@url@admin/forum-new?name=@encoded_default_name@">#dotlrn-forums.New_Forum#</a>
   </li>
 </ul>
