@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<message_catalog package_key="dotlrn-forums" package_version="2.0.3" locale="AR_LB" charset="utf-8">
+<message_catalog package_key="dotlrn-forums" package_version="2.0.3" locale="ar_LB" charset="utf-8">
 
+  <msg key="Auto_subscribe_label">تسجيل الاعضاء بشكل اوتوماتيكي</msg>
   <msg key="by_Date">بالتّاريخ</msg>
   <msg key="by_Forum">بالمنتدى</msg>
   <msg key="Forum">مُنتدى</msg>
