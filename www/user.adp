@@ -1,9 +1,9 @@
 <master>
-<property name="title">Forums: Posting history for @user.full_name@</property>
+<property name="title">#dotlrn-forums.lt_Forums_Posting_histor#</property>
 <property name="context_bar">@context_bar@</property>
 
 <p>
-  Posting history for
+  #dotlrn-forums.Posting_history_for#
   <b>
     <%
         if {![permission::permission_p -object_id [acs_magic_object security_context_root] -privilege admin]} {
@@ -28,9 +28,9 @@
   <table bgcolor="#cccccc" width="95%">
 
     <tr>
-      <th align="left" width="30%">Forum</th>
-      <th align="left">Subject</th>
-      <th align="center" width="20%">Posted</th>
+      <th align="left" width="30%">#dotlrn-forums.Forum#</th>
+      <th align="left">#dotlrn-forums.Subject#</th>
+      <th align="center" width="20%">#dotlrn-forums.Posted#</th>
     </tr>
 
 <if @messages:rowcount@ gt 0>
@@ -54,7 +54,7 @@
 <else>
     <tr>
       <td colspan="3">
-        <i>No Postings.</i>
+        <i>#dotlrn-forums.No_Postings#</i>
       </td>
     </tr>
 </else>
@@ -74,8 +74,8 @@
     </tr>
 
     <tr>
-      <th align="left">Subject</th>
-      <th align="center" width="20%">Posted</th>
+      <th align="left">#dotlrn-forums.Subject#</th>
+      <th align="center" width="20%">#dotlrn-forums.Posted#</th>
     </tr>
 
 <group column="forum_name">
@@ -102,3 +102,4 @@
 </if>
 
 </center>
+

@@ -12,14 +12,14 @@ ad_page_contract {
 }
 
 # choosing the view
-set dimensional_list {
-    {
-        view "View:" date {
-            {date "by Date" {}}
-            {forum "by Forum" {}}
-        }
-    }
-}
+set dimensional_list [list \
+    [list \
+        view "[_ dotlrn-forums.View]" date [list \
+            [list date "[_ dotlrn-forums.by_Date]" {}] \
+            [list forum "[_ dotlrn-forums.by_Forum]" {}] \
+        ] \
+    ] \
+]
 
 set query select_messages
 if {[string equal $view forum]} {
@@ -34,6 +34,6 @@ oacs::user::get -user_id $user_id -array user
 
 set dimensional_chunk [ad_dimensional $dimensional_list]
 
-set context_bar {{Posting History}}
+set context_bar [list [_ dotlrn-forums.Posting_History]]
 
 ad_return_template

@@ -345,7 +345,7 @@ namespace eval dotlrn_forums {
             -community_id $community_id \
             -applet_key [applet_key] \
         ]
-        set name "$old_value Forum"
+        set name "$old_value [_ dotlrn-forums.Forum]"
 
         db_foreach select_forums_with_old_name {
             select *
@@ -355,7 +355,7 @@ namespace eval dotlrn_forums {
         } {
             forum::edit \
                 -forum_id $forum_id \
-                -name "$new_value Forum" \
+                -name "$new_value [_ dotlrn-forums.Forum]" \
                 -charter $charter \
                 -presentation_type $presentation_type \
                 -posting_policy $posting_policy
