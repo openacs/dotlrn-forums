@@ -32,6 +32,7 @@ begin
 	foo := acs_sc_impl.new (
 		impl_contract_name => 'dotlrn_applet',
 		impl_name => 'dotlrn_forums',
+		impl_pretty_name => 'dotlrn_forums',
 		impl_owner_name => 'dotlrn_forums'
 	);
 
