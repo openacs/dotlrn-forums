@@ -110,9 +110,9 @@ declare
 begin
 	-- create the implementation
 	foo := acs_sc_impl.new (
-		'portal_datasource',
-		'dotlrn_forums_admin_portlet',
-		'dotlrn_forums_admin_portlet'
+		impl_contract_name => 'portal_datasource',
+		impl_name => 'dotlrn_forums_admin_portlet',
+		impl_owner_name => 'dotlrn_forums_admin_portlet'
 	);
 
 end;
