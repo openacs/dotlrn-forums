@@ -43,7 +43,7 @@
     <tr bgcolor="#d9e4f9">
   </else>
 
-      <td><a href="@messages.url@forum-view?forum_id=@messages.forum_id@"><%= $community_names($messages(package_id)) %>: @messages.forum_name@</a></td>
+      <td><a href="@messages.url@forum-view?forum_id=@messages.forum_id@">@messages.forum_name@</a></td>
       <td><a href="@messages.url@message-view?message_id=@messages.message_id@">@messages.subject@</a></td>
       <td align="center">@messages.posting_date@</td>
 
@@ -70,7 +70,7 @@
   <table bgcolor="#cccccc" width="95%">
 
     <tr bgcolor="#eeeeee">
-      <th align="left" colspan="2"><%= $community_names($messages(package_id)) %>: @messages.forum_name@<br><br></th>
+      <th align="left" colspan="2">@messages.forum_name@<br><br></th>
     </tr>
 
     <tr>
