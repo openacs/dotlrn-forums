@@ -16,11 +16,6 @@
 
 
 --
--- The forums applet for dotLRN
--- copyright 2001, OpenForce
--- distributed under GPL v2.0
---
---
 -- @author Ben Adida (ben@openforce.net)
 -- @creation-date 2002-05-29
 -- @version $Id$
