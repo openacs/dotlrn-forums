@@ -61,19 +61,10 @@ namespace eval dotlrn_forums {
         Add the forums applet to dotlrn - for one-time init
         Must be repeatable!
     } {
-        ns_log notice "YON: dotlrn_forums::add_applet starting"
-
         if {![dotlrn_applet::is_applet_mounted -url forums]} {
             dotlrn_applet::add_applet_to_dotlrn -applet_key [applet_key]
-
-            ns_log notice "YON: dotlrn_forums::add_applet called dotlrn_applet::add_applet_to_dotlrn for [applet_key]"
-
             dotlrn_applet::mount -package_key [my_package_key] -url forums -pretty_name [get_pretty_name]
-
-            ns_log notice "YON: dotlrn_forums::add_applet called dotlrn_applet::mount for package_key [my_package_key] and url forums"
         }
-
-        ns_log notice "YON: dotlrn_forums::add_applet ending"
     }
 
     ad_proc -public remove_applet {
