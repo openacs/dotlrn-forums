@@ -62,7 +62,7 @@ namespace eval dotlrn_forums {
         Must be repeatable!
     } {
         if {![dotlrn_applet::is_applet_mounted -url forums]} {
-            dotlrn_applet::add_applet_to_dotlrn -applet_key [applet_key]
+            dotlrn_applet::add_applet_to_dotlrn -applet_key [applet_key] -package_key [my_package_key]
             dotlrn_applet::mount -package_key [my_package_key] -url forums -pretty_name [get_pretty_name]
         }
     }
