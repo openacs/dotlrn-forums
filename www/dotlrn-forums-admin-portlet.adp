@@ -22,9 +22,15 @@
 <multiple name="forums">
   <li>
     <a href="@url@admin/forum-edit?forum_id=@forums.forum_id@">@forums.name@</a>
-<if @forums.enabled_p@ ne t><b>(disabled)</b></if>
-<if @forums.autosubscribe_p@ true> #dotlrn-forums.lt_Group_members_are_aut# | <a href="@dotlrn_url@/unsubscribe-members?@forums.query_vars@">#dotlrn-forums.unsubscribe_group_members#</a> </if>
-<else> #dotlrn-forums.lt_Group_members_are_not# | <a href="@dotlrn_url@/subscribe-members?@forums.query_vars@">#dotlrn-forums.subscribe_group_members#</a> </else>
+    <if @forums.enabled_p@ false><b>(disabled)</b></if>
+    <br>
+    #dotlrn-forums.Auto_subscribe_label#:
+    <if @forums.autosubscribe_p@ true>
+      <b>#acs-kernel.common_yes#</b> | <a href="@dotlrn_url@/unsubscribe-members?@forums.query_vars@">#acs-kernel.common_no#</a>
+    </if>
+    <else>
+      <a href="@dotlrn_url@/subscribe-members?@forums.query_vars@">#acs-kernel.common_yes#</a> | <b>#acs-kernel.common_no#</b>
+    </else>
   </li>
 </multiple>
   <br>
