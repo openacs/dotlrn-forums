@@ -88,13 +88,45 @@ namespace eval dotlrn_forums {
     } {
         Add the forums applet to a dotlrn community
     } {
-        # Create and Mount
+        # Create and Mount the forums package
         set package_id [dotlrn::instantiate_and_mount \
             -mount_point forums \
             $community_id \
             [package_key] \
         ]
 
+        # mount attachments under forums, if available
+        # attachments requires that dotlrn-fs is already mounted 
+        if {[apm_package_registered_p attachments]
+            && [dotlrn_community::applet_active_p \
+                    -community_id $community_id \
+                    -applet_key [dotlrn_fs::applet_key]]} {
+
+            set attachments_node_id [site_node::new \
+                -name [attachments::get_url] \
+                -parent_id [site_node::get_node_id_from_object_id \
+                    -object_id $package_id
+                ]
+            ]
+
+            site_node::mount \
+                -node_id $attachments_node_id \
+                -object_id [apm_package_id_from_key attachments]
+
+            set fs_package_id [dotlrn::get_community_applet_package_id \
+                 -community_id $community_id \
+                 -package_key [dotlrn_fs::package_key]
+            ]
+                                     
+            # map the fs root folder to the package_id of the new forums pkg
+            attachments::map_root_folder \
+                -package_id $package_id \
+                -folder_id [fs::get_root_folder -package_id $fs_package_id] 
+            
+        } else {
+            ns_log Warning "DOTLRN-FORUMS: Warning attachments or dotlrn-fs not found!"
+        }
+        
         set auto_create_forum_p [parameter::get_from_package_key \
             -package_key [my_package_key] \
             -parameter auto_create_forum_p \
