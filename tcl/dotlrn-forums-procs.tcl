@@ -61,9 +61,19 @@ namespace eval dotlrn_forums {
         Add the forums applet to dotlrn - for one-time init
         Must be repeatable!
     } {
-        if {![dotlrn_applet::is_applet_mounted -url forums]} {
-            dotlrn_applet::add_applet_to_dotlrn -applet_key [applet_key] -package_key [my_package_key]
-            dotlrn_applet::mount -package_key [my_package_key] -url forums -pretty_name [get_pretty_name]
+        if {![dotlrn_applet::applet_exists_p -applet_key [applet_key]]} {
+
+            db_transaction {
+                dotlrn_applet::mount \
+                    -package_key [my_package_key] \
+                    -url forums \
+                    -pretty_name [get_pretty_name]
+
+                dotlrn_applet::add_applet_to_dotlrn \
+                    -applet_key [applet_key] \
+                    -package_key [my_package_key]
+            }
+
         }
     }
 
@@ -104,9 +114,9 @@ namespace eval dotlrn_forums {
                 -node_id $attachments_node_id \
                 -object_id [apm_package_id_from_key attachments]
 
-            set fs_package_id [dotlrn::get_community_applet_package_id \
+            set fs_package_id [dotlrn_community::get_applet_package_id \
                  -community_id $community_id \
-                 -package_key [dotlrn_fs::package_key]
+                 -applet_key [dotlrn_fs::applet_key]
             ]
                                      
             # map the fs root folder to the package_id of the new forums pkg
@@ -199,8 +209,8 @@ namespace eval dotlrn_forums {
     } {
         set portal_id [dotlrn::get_portal_id -user_id $user_id]
         set package_id [dotlrn_community::get_applet_package_id \
-            $community_id \
-            [applet_key] \
+            -community_id $community_id \
+            -applet_key [applet_key] \
         ]
         set args [ns_set create]
         ns_set put $args package_id $package_id
@@ -233,7 +243,10 @@ namespace eval dotlrn_forums {
         Remove a user from a community
     } {
         set portal_id [dotlrn::get_portal_id -user_id $user_id]
-        set package_id [dotlrn_community::get_applet_package_id $community_id [applet_key]]
+        set package_id [dotlrn_community::get_applet_package_id \
+            -community_id $community_id \
+            -applet_key [applet_key] \
+        ]
 
         set args [ns_set create]
         ns_set put $args package_id $package_id
