@@ -27,7 +27,10 @@ if {[string equal $view forum]} {
 }
 
 # Select the postings
-db_multirow messages $query {}
+db_multirow -extend { posting_date_pretty } messages $query {} {
+    set posting_date_ansi [lc_time_system_to_conn $posting_date_ansi]
+    set posting_date_pretty [lc_time_fmt $posting_date_ansi "%x %X"]
+}
 
 # Get user information
 oacs::user::get -user_id $user_id -array user
