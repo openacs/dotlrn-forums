@@ -97,12 +97,17 @@ namespace eval dotlrn_forums {
         ]
 
         # mount attachments under forums, if available
-        # attachments requires that dotlrn-fs is already mounted
-        if {[apm_package_registered_p attachments] && [dotlrn_community::applet_active_p -community_id $community_id -applet_key [dotlrn_fs::applet_key]]} {
+        # attachments requires that dotlrn-fs is already mounted 
+        if {[apm_package_registered_p attachments]
+            && [dotlrn_community::applet_active_p \
+                    -community_id $community_id \
+                    -applet_key [dotlrn_fs::applet_key]]} {
 
             set attachments_node_id [site_node::new \
                 -name [attachments::get_url] \
-                -parent_id [site_node::get_node_id_from_object_id -object_id $package_id]
+                -parent_id [site_node::get_node_id_from_object_id \
+                    -object_id $package_id
+                ]
             ]
 
             site_node::mount \
@@ -111,16 +116,18 @@ namespace eval dotlrn_forums {
 
             set fs_package_id [dotlrn_community::get_applet_package_id \
                  -community_id $community_id \
-                 -applet_key [dotlrn_fs::applet_key] \
+                 -applet_key [dotlrn_fs::applet_key]
             ]
-
+                                     
             # map the fs root folder to the package_id of the new forums pkg
             attachments::map_root_folder \
                 -package_id $package_id \
-                -folder_id [fs::get_root_folder -package_id $fs_package_id]
-
+                -folder_id [fs::get_root_folder -package_id $fs_package_id] 
+            
+        } else {
+            ns_log Warning "DOTLRN-FORUMS: Warning attachments or dotlrn-fs not found!"
         }
-
+        
         set auto_create_forum_p [parameter::get_from_package_key \
             -package_key [my_package_key] \
             -parameter auto_create_forum_p \
@@ -151,7 +158,7 @@ namespace eval dotlrn_forums {
             -community_id $community_id \
         ]
 
-        forums_admin_portlet::add_self_to_page \
+        dotlrn_forums_admin_portlet::add_self_to_page \
             -portal_id $admin_portal_id \
             -package_id $package_id
 
@@ -216,10 +223,9 @@ namespace eval dotlrn_forums {
 
         dotlrn_forums::add_portlet_helper $portal_id $args
 
-        # Set up notifications for all the forums
-        foreach forum [forum::list_forums -package_id $package_id] {
-            set forum_id [ns_set get $forum forum_id]
+        # Set up notifications for all the forums that have set for autosubscription
 
+        db_foreach select_forums {} {
             notification::request::new \
                 -type_id [notification::type::get_type_id -short_name forums_forum_notif] \
                 -user_id $user_id \
@@ -227,6 +233,7 @@ namespace eval dotlrn_forums {
                 -interval_id [notification::get_interval_id -name instant] \
                 -delivery_method_id [notification::get_delivery_method_id -name email]
         }
+
     }
 
     ad_proc -public remove_user_from_community {

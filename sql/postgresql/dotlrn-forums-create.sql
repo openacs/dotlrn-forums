@@ -27,17 +27,15 @@
 
 create function inline_0()
 returns integer as '
-declare
-    foo                             integer;
 begin
 
-    foo := acs_sc_impl__new (
+    perform acs_sc_impl__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''dotlrn_forums''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''GetPrettyName'',
@@ -45,7 +43,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''AddApplet'',
@@ -53,7 +51,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''RemoveApplet'',
@@ -61,7 +59,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''AddAppletToCommunity'',
@@ -69,7 +67,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''RemoveAppletFromCommunity'',
@@ -77,7 +75,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''AddUser'',
@@ -85,7 +83,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''RemoveUser'',
@@ -93,7 +91,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''AddUserToCommunity'',
@@ -101,7 +99,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''RemoveUserFromCommunity'',
@@ -109,7 +107,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''AddPortlet'',
@@ -117,7 +115,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''RemovePortlet'',
@@ -125,7 +123,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''Clone'',
@@ -133,7 +131,7 @@ begin
         ''TCL''
     );
 
-    foo := acs_sc_impl_alias__new (
+    perform acs_sc_impl_alias__new (
         ''dotlrn_applet'',
         ''dotlrn_forums'',
         ''ChangeEventHandler'',
@@ -152,3 +150,5 @@ end;' language 'plpgsql';
 
 select inline_0();
 drop function inline_0();
+
+\i dotlrn-forums-admin-portlet-create.sql
