@@ -218,18 +218,23 @@ namespace eval dotlrn_forums {
         Remove a user from a community
     } {
         set portal_id [dotlrn::get_portal_id -user_id $user_id]
-        set package_id [dotlrn_community::get_applet_package_id \
-                            $community_id \
-                            [applet_key]
-        ]
+        set package_id [dotlrn_community::get_applet_package_id $community_id [applet_key]]
 
         set args [ns_set create]
         ns_set put $args package_id $package_id
 
         remove_portlet $portal_id $args
 
-        # Remove notifications
-        # FIXME: must do this
+        foreach forum [forum::list_forums -package_id $package_id] {
+            set forum_id [ns_set get $forum forum_id]
+
+            notification::request::delete \
+                -request_id [notification::request::get_request_id \
+                    -type_id [notification::type::get_type_id -short_name forums_forum_notif] \
+                    -user_id $user_id \
+                    -object_id $forum_id \
+                ]
+        }
     }
 
     ad_proc -public add_portlet {
