@@ -6,8 +6,6 @@
   <msg key="Forum">Forum</msg>
   <msg key="forums_default_name_suffix">Forum</msg>
   <msg key="lt_Forums_Posting_histor">Diskussionsforen: Verlauf der Forumsbeiträge für Benutzer %user.full_name%</msg>
-  <msg key="lt_Group_members_are_aut">Für die Teilnehmer der Gruppe ist die Benachrichtigungsfunktion automatisch aktiviert.</msg>
-  <msg key="lt_Group_members_are_not">Für die Teilnehmer der Gruppe ist die Benachrichtigungsfunktion nicht automatisch aktiviert.</msg>
   <msg key="lt_There_should_be_only_">Es sollte nur eine einzige Foren-Instanz für Administrationsszwecke geben</msg>
   <msg key="New_Forum">Neues Forum erstellen</msg>
   <msg key="No_Postings">Keine Forumsbeiträge vorhanden.</msg>
@@ -15,7 +13,5 @@
   <msg key="Posting_History">Verlauf der Forumsbeiträge</msg>
   <msg key="Posting_history_for">Verlauf der Forumsbeiträge für</msg>
   <msg key="Subject">Betreff</msg>
-  <msg key="subscribe_group_members">Benachrichtigungsfunktion aktivieren</msg>
-  <msg key="unsubscribe_group_members">Benachrichtigungsfunktion deaktivieren</msg>
   <msg key="View">Ansehen:</msg>
 </message_catalog>

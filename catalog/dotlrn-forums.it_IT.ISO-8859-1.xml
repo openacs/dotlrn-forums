@@ -6,8 +6,6 @@
   <msg key="Forum">Forum</msg>
   <msg key="forums_default_name_suffix">Forum</msg>
   <msg key="lt_Forums_Posting_histor">Forum: Elenco dei messggi per %user.full_name%</msg>
-  <msg key="lt_Group_members_are_aut">I membri del gruppo sono iscritti automaticamente</msg>
-  <msg key="lt_Group_members_are_not">I membri del gruppo non sono iscritti automaticamente</msg>
   <msg key="lt_There_should_be_only_">Ci dovrebbe essere un'unica istanza di forum per scopi amministrativi</msg>
   <msg key="New_Forum">Nuovo Forum</msg>
   <msg key="No_Postings">Nessun invio.</msg>
@@ -15,7 +13,5 @@
   <msg key="Posting_History">Storico dei messaggi</msg>
   <msg key="Posting_history_for">Elenco dei messaggiper</msg>
   <msg key="Subject">Oggetto</msg>
-  <msg key="subscribe_group_members">Sottoscrivili</msg>
-  <msg key="unsubscribe_group_members">Cancella la sottoscrizione</msg>
   <msg key="View">Vedi</msg>
 </message_catalog>

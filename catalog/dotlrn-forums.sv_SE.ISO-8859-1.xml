@@ -6,8 +6,6 @@
   <msg key="Forum">Forum</msg>
   <msg key="forums_default_name_suffix">Forum</msg>
   <msg key="lt_Forums_Posting_histor">Forum: Historik över inlägg för %user.full_name%</msg>
-  <msg key="lt_Group_members_are_aut">Gruppmedlemmar prenumererar med automatik</msg>
-  <msg key="lt_Group_members_are_not">Fruppmedlemmar prenumererar ej med automatik</msg>
   <msg key="lt_There_should_be_only_">Det skall bara finnas en uppsättning forum för administrativa ändamål</msg>
   <msg key="New_Forum">Nytt forum</msg>
   <msg key="No_Postings">Inga inlägg.</msg>
@@ -15,7 +13,5 @@
   <msg key="Posting_History">Inläggshistorik</msg>
   <msg key="Posting_history_for">Inläggshistorik för</msg>
   <msg key="Subject">Ämne</msg>
-  <msg key="subscribe_group_members">prenumerera på dessa</msg>
-  <msg key="unsubscribe_group_members">säg upp prenumation på dessa</msg>
   <msg key="View">Vy:</msg>
 </message_catalog>

@@ -6,8 +6,6 @@
   <msg key="Forum">Forum</msg>
   <msg key="forums_default_name_suffix">Forum</msg>
   <msg key="lt_Forums_Posting_histor">Forum: Głosy użytkownika %user.full_name%</msg>
-  <msg key="lt_Group_members_are_aut">Członkowie grupy są zapisani automatycznie </msg>
-  <msg key="lt_Group_members_are_not">Członkowie grupy nie są zapisywani automatycznie</msg>
   <msg key="lt_There_should_be_only_">Powinno być tylko jedno forum do celów administracyjnych.</msg>
   <msg key="New_Forum">Nowe Forum</msg>
   <msg key="No_Postings">Brak głosów</msg>
@@ -15,7 +13,5 @@
   <msg key="Posting_History">Historia Dyskusji</msg>
   <msg key="Posting_history_for">Głosy </msg>
   <msg key="Subject">Temat</msg>
-  <msg key="subscribe_group_members">zapisz ich</msg>
-  <msg key="unsubscribe_group_members">wypisz ich</msg>
   <msg key="View">Widok:</msg>
 </message_catalog>

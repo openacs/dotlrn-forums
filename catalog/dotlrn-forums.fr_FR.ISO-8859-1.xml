@@ -6,8 +6,6 @@
   <msg key="Forum">Forum</msg>
   <msg key="forums_default_name_suffix">Forum</msg>
   <msg key="lt_Forums_Posting_histor">Forums: historique de messages de %user.full_name%</msg>
-  <msg key="lt_Group_members_are_aut">Les membres du groupe sont inscrits automatiquement</msg>
-  <msg key="lt_Group_members_are_not">Les membres du groupe ne sont pas inscrits automatiquement</msg>
   <msg key="lt_There_should_be_only_">Il ne peut y avoir qu'une seule instance de forum pour l'administration.</msg>
   <msg key="New_Forum">Nouveau forum</msg>
   <msg key="No_Postings">Aucun message.</msg>
@@ -15,7 +13,5 @@
   <msg key="Posting_History">Historique de messages</msg>
   <msg key="Posting_history_for">Historique de messages de</msg>
   <msg key="Subject">Objet</msg>
-  <msg key="subscribe_group_members">les inscrire</msg>
-  <msg key="unsubscribe_group_members">les désinscrire</msg>
   <msg key="View">Voir:</msg>
 </message_catalog>

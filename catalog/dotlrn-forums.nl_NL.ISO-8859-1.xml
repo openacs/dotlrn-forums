@@ -6,8 +6,6 @@
   <msg key="Forum">Forum</msg>
   <msg key="forums_default_name_suffix">Forum</msg>
   <msg key="lt_Forums_Posting_histor">Forums: Plaatsing in het verleden door %user.full_name%</msg>
-  <msg key="lt_Group_members_are_aut">Groepsleden worden automatisch aangemeld</msg>
-  <msg key="lt_Group_members_are_not">Groepsleden worden niet automatisch aangemeld</msg>
   <msg key="lt_There_should_be_only_">Er behoort slechts één geval van forums te zijn voor beheerdoeleinden </msg>
   <msg key="New_Forum">Nieuw Forum</msg>
   <msg key="No_Postings">Geen plaatsingen.</msg>
@@ -15,7 +13,5 @@
   <msg key="Posting_History">Plaatsingen in het verleden</msg>
   <msg key="Posting_history_for">Plaatsingen in het verleden door</msg>
   <msg key="Subject">Onderwerp</msg>
-  <msg key="subscribe_group_members">schrijf ze in</msg>
-  <msg key="unsubscribe_group_members">schrijf ze uit</msg>
   <msg key="View">Bekijk:</msg>
 </message_catalog>

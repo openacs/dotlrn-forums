@@ -6,8 +6,6 @@
   <msg key="Forum">Forum</msg>
   <msg key="forums_default_name_suffix">Forum</msg>
   <msg key="lt_Forums_Posting_histor">Forums: Histórico de mensagens para %user.full_name% </msg>
-  <msg key="lt_Group_members_are_aut">Membros do Grupo são auto-inscritos</msg>
-  <msg key="lt_Group_members_are_not">Membros do Grupo não são auto-inscritos</msg>
   <msg key="lt_There_should_be_only_">Deve haver uma única instância dos forums para propósitos de administração</msg>
   <msg key="New_Forum">Novo Forum</msg>
   <msg key="No_Postings">Nenhuma Mensagem Enviada.</msg>
@@ -15,7 +13,5 @@
   <msg key="Posting_History">Histórico das mensagens</msg>
   <msg key="Posting_history_for">Histórico das mensagens para</msg>
   <msg key="Subject">Assunto</msg>
-  <msg key="subscribe_group_members">subscreva-os</msg>
-  <msg key="unsubscribe_group_members">desubscreva-os</msg>
   <msg key="View">Ver:</msg>
 </message_catalog>

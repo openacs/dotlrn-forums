@@ -6,8 +6,6 @@
   <msg key="Forum">Forum</msg>
   <msg key="forums_default_name_suffix">Forum</msg>
   <msg key="lt_Forums_Posting_histor">Fora: Logg for %user.full_name%</msg>
-  <msg key="lt_Group_members_are_aut">Gruppemedlemmer er automatisk innlagt</msg>
-  <msg key="lt_Group_members_are_not">Gruppemedlemmer er ikke automatisk innlagt</msg>
   <msg key="lt_There_should_be_only_">Det burde bare være ett forum for administrasjonsformål</msg>
   <msg key="New_Forum">nytt forum</msg>
   <msg key="No_Postings">Ingen innlegg</msg>
@@ -15,7 +13,5 @@
   <msg key="Posting_History">Innleggelseslogg</msg>
   <msg key="Posting_history_for">Innleggelseslogg fo</msg>
   <msg key="Subject">Emne</msg>
-  <msg key="subscribe_group_members">legg dem inn som medlemmer</msg>
-  <msg key="unsubscribe_group_members">fjern dem som medlemmer</msg>
   <msg key="View">Utvalg:</msg>
 </message_catalog>

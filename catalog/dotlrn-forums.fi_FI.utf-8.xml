@@ -6,8 +6,6 @@
   <msg key="Forum">Keskusteluryhmä</msg>
   <msg key="forums_default_name_suffix">Keskusteluryhmä</msg>
   <msg key="lt_Forums_Posting_histor">Keskusteluryhmät: Käyttäjän %user.full_name% lähetyshistoria</msg>
-  <msg key="lt_Group_members_are_aut">Ryhmän jäsenet on lisätty automaattisesti</msg>
-  <msg key="lt_Group_members_are_not">Ryhmän jäseniä ei ole lisätty automaattisesti</msg>
   <msg key="lt_There_should_be_only_">Hallintointitarpeita varten pitäisi olla vain yksi keskusteluryhmä</msg>
   <msg key="New_Forum">Lisää uusi keskusteluryhmä</msg>
   <msg key="No_Postings">Ei viestejä.</msg>
@@ -15,7 +13,5 @@
   <msg key="Posting_History">Lähetyshistoria</msg>
   <msg key="Posting_history_for">Lähetyshistoria käyttäjälle</msg>
   <msg key="Subject">Otsikko</msg>
-  <msg key="subscribe_group_members">liitä käyttäjät</msg>
-  <msg key="unsubscribe_group_members">poista käyttäjät ryhmästä</msg>
   <msg key="View">Näytä:</msg>
 </message_catalog>
