@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message_catalog package_key="dotlrn-forums" package_version="0.1a" locale="ms_my" charset="utf-8">
+
+  <msg key="by_Date">melalui Tarikh</msg>
+  <msg key="by_Forum">melalui Forum</msg>
+  <msg key="Forum">Forum
+</msg>
+  <msg key="New_Forum">Forum Baru</msg>
+  <msg key="No_Postings">Tiada Pos</msg>
+  <msg key="Posted">Telah Dipos</msg>
+  <msg key="Subject">Subjek</msg>
+  <msg key="View">Lihat</msg>
+</message_catalog>
