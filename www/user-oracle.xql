@@ -7,7 +7,7 @@
         <querytext>
             select forums_messages.message_id,
                    forums_messages.subject,
-                   to_char(forums_messages.posting_date, 'Mon DD YYYY HH24:MI:SS') as posting_date,
+                   to_char(forums_messages.posting_date, 'YYYY-MM-DD HH24:MI:SS') as posting_date_ansi,
                    forums_forums.forum_id,
                    forums_forums.package_id,
                    forums_forums.name as forum_name,
@@ -26,7 +26,7 @@
         <querytext>
             select forums_messages.message_id,
                    forums_messages.subject,
-                   to_char(forums_messages.posting_date, 'Mon DD YYYY HH24:MI:SS') as posting_date,
+                   to_char(forums_messages.posting_date, 'YYYY-MM-DD HH24:MI:SS') as posting_date_ansi,
                    forums_forums.forum_id,
                    forums_forums.package_id,
                    forums_forums.name as forum_name,
