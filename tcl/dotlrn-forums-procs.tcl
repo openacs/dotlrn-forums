@@ -150,8 +150,7 @@ namespace eval dotlrn_forums {
             -rel_type dotlrn_member_rel \
         ]
 
-        permission::grant -party_id $members -object_id $package_id -privilege forum_read
-        permission::grant -party_id $members -object_id $package_id -privilege forum_post
+        permission::grant -party_id $members -object_id $package_id -privilege read
 
         # set up the admin portlet
         set admin_portal_id [dotlrn_community::get_admin_portal_id \
