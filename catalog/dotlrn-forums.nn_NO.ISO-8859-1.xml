@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="dotlrn-forums" package_version="2.1.0b1" locale="nn_NO" charset="ISO-8859-1">
+<message_catalog package_key="dotlrn-forums" package_version="2.2.0a1" locale="nn_NO" charset="ISO-8859-1">
 
+  <msg key="administer">administrer</msg>
+  <msg key="All_forums">Alle fora</msg>
   <msg key="Auto_subscribe_label">Legg medlemene i gruppa automatisk inn som medlemer av diskusjonsgruppa</msg>
   <msg key="by_Date">etter dato</msg>
   <msg key="by_Forum">etter forum</msg>
