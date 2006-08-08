@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="dotlrn-forums" package_version="2.1.0b1" locale="nl_NL" charset="ISO-8859-1">
+<message_catalog package_key="dotlrn-forums" package_version="2.2.0b2" locale="nl_NL" charset="ISO-8859-1">
 
+  <msg key="administer">Beheren</msg>
+  <msg key="All_forums">Alle forums</msg>
   <msg key="Auto_subscribe_label">Groepsleden automatisch inschrijven</msg>
   <msg key="by_Date">op datum</msg>
   <msg key="by_Forum">op forum</msg>

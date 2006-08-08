@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="dotlrn-forums" package_version="2.1.0b1" locale="pt_BR" charset="ISO-8859-1">
+<message_catalog package_key="dotlrn-forums" package_version="2.2.0b2" locale="pt_BR" charset="ISO-8859-1">
 
+  <msg key="administer">administrar</msg>
+  <msg key="All_forums">Todos os fóruns</msg>
+  <msg key="all_Forums">Todos os Fóruns</msg>
   <msg key="Auto_subscribe_label">Inscrever autmotaticamente membros do grupo</msg>
   <msg key="by_Date">por Data</msg>
   <msg key="by_Forum">por Fórum</msg>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<message_catalog package_key="dotlrn-forums" package_version="2.1.0b1" locale="pl_PL" charset="utf-8">
+<message_catalog package_key="dotlrn-forums" package_version="2.2.0b2" locale="pl_PL" charset="utf-8">
 
+  <msg key="administer">administruj</msg>
+  <msg key="All_forums">Wszystkie fora</msg>
+  <msg key="all_Forums">Wszystkie Fora</msg>
+  <msg key="Auto_subscribe_label">Zapisz automatycznie członków grupy</msg>
   <msg key="by_Date">wg. Daty</msg>
   <msg key="by_Forum">wg. Forum</msg>
   <msg key="Forum">Forum</msg>

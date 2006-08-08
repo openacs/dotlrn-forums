@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<message_catalog package_key="dotlrn-forums" package_version="2.1.0b1" locale="ru_RU" charset="utf-8">
+<message_catalog package_key="dotlrn-forums" package_version="2.2.0b2" locale="ru_RU" charset="utf-8">
 
+  <msg key="administer">админ.</msg>
+  <msg key="All_forums">Все доски объявлений</msg>
+  <msg key="Auto_subscribe_label">Автоматически подписать на рассылку членов группы</msg>
   <msg key="by_Date">по Дате</msg>
   <msg key="by_Forum">по Конференции</msg>
   <msg key="Forum">Конференция</msg>
