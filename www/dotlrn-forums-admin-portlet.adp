@@ -34,7 +34,8 @@
     </else>
   </li>
 </multiple>
-  <br>
+</ul>
+<ul>
   <li>
     <a href="@url@admin/forum-new?name=@encoded_default_name@">#dotlrn-forums.New_Forum#</a>
   </li>
