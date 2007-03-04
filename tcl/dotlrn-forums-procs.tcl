@@ -53,7 +53,7 @@ namespace eval dotlrn_forums {
     } {
         return the pretty name of this applet.
     } {
-        return Forums
+        return "#forums.pretty_name#"
     }
 
     ad_proc -public add_applet {
