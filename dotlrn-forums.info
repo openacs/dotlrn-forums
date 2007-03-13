@@ -15,7 +15,7 @@
 
         <provides url="dotlrn-forums" version="2.3.0d2"/>
         <requires url="dotlrn" version="2.3.0d1"/>
-        <requires url="forums-portlet" version="2.3.0d1"/>
+        <requires url="forums-portlet" version="2.3.0d2"/>
 
         <callbacks>
         </callbacks>
