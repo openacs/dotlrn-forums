@@ -21,6 +21,10 @@ set dimensional_list [list \
     ] \
 ]
 
+# provide screen_name functionality
+set screen_name [db_string select_screen_name { select screen_name from users where user_id = :user_id}]
+set useScreenNameP [parameter::get -parameter "UseScreenNameP" -default 0]
+
 set query select_messages
 if {[string equal $view forum]} {
     set query select_messages_by_forum

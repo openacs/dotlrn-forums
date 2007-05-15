@@ -5,13 +5,16 @@
 <p>
   #dotlrn-forums.Posting_history_for#
   <b>
-    <%
+    <if @useScreenNameP@>@screen_name@</if>
+    <else>
+      <%
         if {![permission::permission_p -object_id [acs_magic_object security_context_root] -privilege admin]} {
             adp_puts [acs_community_member_link -user_id $user(user_id)]
         } else {
             adp_puts [acs_community_member_admin_link -user_id $user(user_id)]
         }
-    %>
+      %>
+    </else>
   </b>
 </p>
 
