@@ -24,12 +24,12 @@ namespace eval dotlrn_forums_admin_portlet {
 
     ad_proc -private get_my_name {
     } {
-	return "dotlrn_forums_admin_portlet"
+        return "dotlrn_forums_admin_portlet"
     }
 
     ad_proc -public get_pretty_name {
     } {
-	return "Forums Administration"
+        return "Forums Administration"
     }
 
     ad_proc -private my_package_key {
@@ -43,10 +43,10 @@ namespace eval dotlrn_forums_admin_portlet {
     }
 
     ad_proc -public add_self_to_page {
-	{-portal_id:required}
+        {-portal_id:required}
         {-package_id:required}
     } {
-	Adds a forums admin PE to the admin portal
+        Adds a forums admin PE to the admin portal
 
         @return new element_id
     } {
@@ -70,7 +70,7 @@ namespace eval dotlrn_forums_admin_portlet {
     }
 
     ad_proc -public show {
-	cf
+        cf
     } {
     } {
         portal::show_proc_helper \
@@ -83,7 +83,7 @@ namespace eval dotlrn_forums_admin_portlet {
         cf
     } {
     } {
-	return ""
+        return ""
     }
 
 }
