@@ -25,128 +25,128 @@
 -- 2002-07-12
 --
 
-create function inline_0()
-returns integer as '
-begin
+CREATE OR REPLACE FUNCTION inline_0() RETURNS integer AS $$
+BEGIN
 
     perform acs_sc_impl__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''dotlrn_forums''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'dotlrn_forums'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''GetPrettyName'',
-        ''dotlrn_forums::get_pretty_name'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'GetPrettyName',
+        'dotlrn_forums::get_pretty_name',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''AddApplet'',
-        ''dotlrn_forums::add_applet'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'AddApplet',
+        'dotlrn_forums::add_applet',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''RemoveApplet'',
-        ''dotlrn_forums::remove_applet'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'RemoveApplet',
+        'dotlrn_forums::remove_applet',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''AddAppletToCommunity'',
-        ''dotlrn_forums::add_applet_to_community'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'AddAppletToCommunity',
+        'dotlrn_forums::add_applet_to_community',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''RemoveAppletFromCommunity'',
-        ''dotlrn_forums::remove_applet_from_community'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'RemoveAppletFromCommunity',
+        'dotlrn_forums::remove_applet_from_community',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''AddUser'',
-        ''dotlrn_forums::add_user'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'AddUser',
+        'dotlrn_forums::add_user',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''RemoveUser'',
-        ''dotlrn_forums::remove_user'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'RemoveUser',
+        'dotlrn_forums::remove_user',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''AddUserToCommunity'',
-        ''dotlrn_forums::add_user_to_community'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'AddUserToCommunity',
+        'dotlrn_forums::add_user_to_community',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''RemoveUserFromCommunity'',
-        ''dotlrn_forums::remove_user_from_community'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'RemoveUserFromCommunity',
+        'dotlrn_forums::remove_user_from_community',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''AddPortlet'',
-        ''dotlrn_forums::add_portlet'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'AddPortlet',
+        'dotlrn_forums::add_portlet',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''RemovePortlet'',
-        ''dotlrn_forums::remove_portlet'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'RemovePortlet',
+        'dotlrn_forums::remove_portlet',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''Clone'',
-        ''dotlrn_forums::clone'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'Clone',
+        'dotlrn_forums::clone',
+        'TCL'
     );
 
     perform acs_sc_impl_alias__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums'',
-        ''ChangeEventHandler'',
-        ''dotlrn_forums::change_event_handler'',
-        ''TCL''
+        'dotlrn_applet',
+        'dotlrn_forums',
+        'ChangeEventHandler',
+        'dotlrn_forums::change_event_handler',
+        'TCL'
     );
 
     perform acs_sc_binding__new (
-        ''dotlrn_applet'',
-        ''dotlrn_forums''
+        'dotlrn_applet',
+        'dotlrn_forums'
     );
 
     return 0;
 
-end;' language 'plpgsql';
+END;
+$$ LANGUAGE plpgsql;
 
 select inline_0();
 drop function inline_0();
