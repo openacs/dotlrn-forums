@@ -138,7 +138,7 @@ namespace eval dotlrn_forums {
             -parameter auto_create_forum_name \
         ]
 
-        if {[string equal $auto_create_forum_p t]} {
+        if {$auto_create_forum_p == "t"} {
             forum::new \
                 -name $auto_create_forum_name \
                 -package_id $package_id
@@ -282,7 +282,7 @@ namespace eval dotlrn_forums {
 
         set type [dotlrn::get_type_from_portal_id -portal_id $portal_id]
 
-        if {[string equal $type user]} {
+        if {$type eq "user"} {
             # portal_id is a user portal template
             ns_set put $args display_group_name_p t
         }
