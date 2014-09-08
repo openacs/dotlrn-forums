@@ -17,7 +17,7 @@ ad_library {
 
     @creation-date September 30 2001
     @author arjun@openforce.net
-    @version $Id$
+    @cvs-id $Id$
 }
 
 namespace eval dotlrn_forums_admin_portlet {
