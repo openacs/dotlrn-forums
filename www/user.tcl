@@ -37,7 +37,7 @@ db_multirow -extend { posting_date_pretty } messages $query {} {
 }
 
 # Get user information
-oacs::user::get -user_id $user_id -array user
+acs_user::get -user_id $user_id -array user
 
 set dimensional_chunk [ad_dimensional $dimensional_list]
 
