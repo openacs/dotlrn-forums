@@ -7,7 +7,7 @@ ad_page_contract {
     @version $Id$
 
 } {
-    user_id:integer,notnull
+    user_id:naturalnum,notnull
     {view "date"}
 }
 
@@ -26,7 +26,7 @@ set screen_name [db_string select_screen_name { select screen_name from users wh
 set useScreenNameP [parameter::get -parameter "UseScreenNameP" -default 0]
 
 set query select_messages
-if {[string equal $view forum]} {
+if {$view eq "forum"} {
     set query select_messages_by_forum
 }
 
@@ -37,7 +37,7 @@ db_multirow -extend { posting_date_pretty } messages $query {} {
 }
 
 # Get user information
-oacs::user::get -user_id $user_id -array user
+acs_user::get -user_id $user_id -array user
 
 set dimensional_chunk [ad_dimensional $dimensional_list]
 
