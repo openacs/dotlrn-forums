@@ -1,6 +1,6 @@
 <master>
-<property name="title">#dotlrn-forums.lt_Forums_Posting_histor#</property>
-<property name="context_bar">@context_bar@</property>
+<property name="doc(title)">#dotlrn-forums.lt_Forums_Posting_histor#</property>
+<property name="context_bar">@context_bar;literal@</property>
 
 <p>
   #dotlrn-forums.Posting_history_for#
