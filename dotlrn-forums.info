@@ -7,14 +7,14 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
     
-    <version name="2.9.0" url="http://openacs.org/repository/download/apm/dotlrn-forums-2.9.0.apm">
+    <version name="2.9.1d1" url="http://openacs.org/repository/download/apm/dotlrn-forums-2.9.1d1.apm">
         <owner url="http://openacs.org">OpenACS</owner>
         <summary>DotLRN Integration (Applet) for Forums Package</summary>
         <release-date>2015-10-04</release-date>
         <vendor url="http://dotlrn.org">DotLRN Consortium</vendor>
         <maturity>2</maturity>
 
-        <provides url="dotlrn-forums" version="2.9.0"/>
+        <provides url="dotlrn-forums" version="2.9.1d1"/>
         <requires url="dotlrn" version="2.9.0"/>
         <requires url="forums-portlet" version="2.9.0"/>
 
