@@ -4,7 +4,7 @@
 
 <p>
   #dotlrn-forums.Posting_history_for#
-  <b>
+  <strong>
     <if @useScreenNameP@>@screen_name@</if>
     <else>
       <%
@@ -15,7 +15,7 @@
         }
       %>
     </else>
-  </b>
+  </strong>
 </p>
 
 <p>
@@ -57,7 +57,7 @@
 <else>
     <tr>
       <td colspan="3">
-        <i>#dotlrn-forums.No_Postings#</i>
+        <em>#dotlrn-forums.No_Postings#</em>
       </td>
     </tr>
 </else>
