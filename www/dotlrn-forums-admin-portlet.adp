@@ -23,10 +23,10 @@
 <multiple name="forums">
   <li>
     <a href="@url@admin/forum-edit?forum_id=@forums.forum_id@" title="#dotlrn-forums.goto_forums_name#">@forums.name@</a>
-    <if @forums.enabled_p@ false><strong>(disabled)</strong></if>
+    <if @forums.enabled_p;literal@ false><strong>(disabled)</strong></if>
     <br>
     #dotlrn-forums.Auto_subscribe_label#:
-    <if @forums.autosubscribe_p@ true>
+    <if @forums.autosubscribe_p;literal@ true>
       <strong>#acs-kernel.common_yes#</strong> | <a href="@dotlrn_url@/unsubscribe-members?@forums.query_vars@" title="#dotlrn-forums.do_not_autosubscribe_members#">#acs-kernel.common_No#</a>
     </if>
     <else>
