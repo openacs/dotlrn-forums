@@ -57,3 +57,9 @@ append default_name " [_ dotlrn-forums.forums_default_name_suffix]"
 set encoded_default_name [ns_urlencode $default_name]
 
 ad_return_template
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:

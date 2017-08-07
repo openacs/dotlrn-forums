@@ -161,11 +161,9 @@ drop function inline_0();
 -- accomplish something simple.
 
 -- JCD: postgres won't let us do this all as one step like oracle will...
-alter table forums_forums add autosubscribe_p                 char(1)
-                                     constraint forums_autosubscribe_p_ck
-                                     check (autosubscribe_p in ('t','f'));
-update forums_forums set autosubscribe_p = 'f' 
+alter table forums_forums add autosubscribe_p  boolean;
+update forums_forums set autosubscribe_p = false
  where autosubscribe_p is null;
-alter table forums_forums alter column autosubscribe_p  SET DEFAULT 'f';
+alter table forums_forums alter column autosubscribe_p  SET DEFAULT false;
 
 \i dotlrn-forums-admin-portlet-create.sql

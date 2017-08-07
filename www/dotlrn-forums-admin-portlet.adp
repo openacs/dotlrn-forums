@@ -23,14 +23,14 @@
 <multiple name="forums">
   <li>
     <a href="@url@admin/forum-edit?forum_id=@forums.forum_id@" title="#dotlrn-forums.goto_forums_name#">@forums.name@</a>
-    <if @forums.enabled_p@ false><b>(disabled)</b></if>
+    <if @forums.enabled_p;literal@ false><strong>(disabled)</strong></if>
     <br>
     #dotlrn-forums.Auto_subscribe_label#:
-    <if @forums.autosubscribe_p@ true>
-      <b>#acs-kernel.common_yes#</b> | <a href="@dotlrn_url@/unsubscribe-members?@forums.query_vars@" title="#dotlrn-forums.do_not_autosubscribe_members#">#acs-kernel.common_No#</a>
+    <if @forums.autosubscribe_p;literal@ true>
+      <strong>#acs-kernel.common_yes#</strong> | <a href="@dotlrn_url@/unsubscribe-members?@forums.query_vars@" title="#dotlrn-forums.do_not_autosubscribe_members#">#acs-kernel.common_No#</a>
     </if>
     <else>
-      <a href="@dotlrn_url@/subscribe-members?@forums.query_vars@" title="#dotlrn-forums.autosubscribe_members#">#acs-kernel.common_yes#</a> | <b>#acs-kernel.common_No#</b>
+      <a href="@dotlrn_url@/subscribe-members?@forums.query_vars@" title="#dotlrn-forums.autosubscribe_members#">#acs-kernel.common_yes#</a> | <strong>#acs-kernel.common_No#</strong>
     </else>
   </li>
 </multiple>
