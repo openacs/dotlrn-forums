@@ -4,7 +4,7 @@ ad_page_contract {
 
     @author Ben Adida (ben@openforce)
     @creation-date 2002-05-29
-    @version $Id$
+    @cvs-id $Id$
 
 } {
     user_id:naturalnum,notnull
