@@ -29,6 +29,8 @@ namespace eval dotlrn_forums_admin_portlet {
 
     ad_proc -public get_pretty_name {
     } {
+        Get the pretty name.
+    } {
         return "#forums-portlet.admin_pretty_name#"
     }
 
@@ -39,6 +41,8 @@ namespace eval dotlrn_forums_admin_portlet {
 
     ad_proc -public link {
     } {
+        Get the link. This is currently empty.
+    } {
         return ""
     }
 
@@ -46,7 +50,7 @@ namespace eval dotlrn_forums_admin_portlet {
         {-portal_id:required}
         {-package_id:required}
     } {
-        Adds a forums admin PE to the admin portal
+        Adds a forums admin PE to the admin portal.
 
         @return new element_id
     } {
@@ -62,7 +66,7 @@ namespace eval dotlrn_forums_admin_portlet {
     ad_proc -public remove_self_from_page {
         {-portal_id:required}
     } {
-        Removes the forums admin PE from the portal
+        Removes the forums admin PE from the portal.
     } {
         portal::remove_element \
             -portal_id $portal_id \
@@ -72,6 +76,7 @@ namespace eval dotlrn_forums_admin_portlet {
     ad_proc -public show {
         cf
     } {
+        Show forums admin portlet.
     } {
         portal::show_proc_helper \
             -package_key [my_package_key] \
@@ -82,6 +87,7 @@ namespace eval dotlrn_forums_admin_portlet {
     ad_proc -public edit {
         cf
     } {
+        Edit the portlet. This is currently empty.
     } {
         return ""
     }
