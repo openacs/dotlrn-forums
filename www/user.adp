@@ -36,7 +36,7 @@
       <th align="center" width="20%">#dotlrn-forums.Posted#</th>
     </tr>
 
-<if @messages:rowcount@ gt 0>
+<if @messages:rowcount;literal@ gt 0>
 <multiple name="messages">
 
   <if @messages.rownum@ odd>
