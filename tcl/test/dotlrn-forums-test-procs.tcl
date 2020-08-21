@@ -26,6 +26,17 @@ aa_register_case \
     aa_equals "Applet key" "[dotlrn_forums::applet_key]" "dotlrn_forums"
 }
 
+aa_register_case -procs {
+        dotlrn_forums_admin_portlet::link
+    } -cats {
+        api
+        production_safe
+    } dotlrn_forums_portlet_links {
+        Test diverse link procs.
+} {
+    aa_equals "dotlrn-forums admin portlet link" "[dotlrn_forums_admin_portlet::link]" ""
+}
+
 # Local variables:
 #    mode: tcl
 #    tcl-indent-level: 4
