@@ -28,13 +28,17 @@ aa_register_case \
 
 aa_register_case -procs {
         dotlrn_forums_admin_portlet::link
+        dotlrn_forums::get_pretty_name
+        dotlrn_forums_admin_portlet::get_pretty_name
     } -cats {
         api
         production_safe
-    } dotlrn_forums_portlet_links {
-        Test diverse link procs.
+    } dotlrn_forums_portlet_links_names {
+        Test diverse link and name procs.
 } {
-    aa_equals "dotlrn-forums admin portlet link" "[dotlrn_forums_admin_portlet::link]" ""
+    aa_equals "dotlrn-forums admin portlet link"        "[dotlrn_forums_admin_portlet::link]" ""
+    aa_equals "dotlrn-forums admin portlet pretty name" "[dotlrn_forums_admin_portlet::get_pretty_name]" "#forums-portlet.admin_pretty_name#"
+    aa_equals "dotlrn-forums pretty name"               "[dotlrn_forums::get_pretty_name]" "#forums.pretty_name#"
 }
 
 # Local variables:
