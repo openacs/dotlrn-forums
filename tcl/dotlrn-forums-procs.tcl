@@ -185,7 +185,7 @@ namespace eval dotlrn_forums {
         ad_return_complaint 1 "[applet_key] remove_applet_from_community not implemented!"
     }
 
-    ad_proc -public add_user {
+    ad_proc -private add_user {
         user_id
     } {
         Called when the user is initially added as a dotlrn user.
@@ -193,7 +193,7 @@ namespace eval dotlrn_forums {
     } {
     }
 
-    ad_proc -public remove_user {
+    ad_proc -private remove_user {
         user_id
     } {
         called when a user is removed from dotlrn.
