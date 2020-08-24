@@ -97,7 +97,7 @@ namespace eval dotlrn_forums {
         ]
 
         # mount attachments under forums, if available
-        # attachments requires that dotlrn-fs is already mounted 
+        # attachments requires that dotlrn-fs is already mounted
         if {[apm_package_registered_p attachments]
             && [dotlrn_community::applet_active_p \
                     -community_id $community_id \
@@ -118,16 +118,16 @@ namespace eval dotlrn_forums {
                  -community_id $community_id \
                  -applet_key [dotlrn_fs::applet_key]
             ]
-                                     
+
             # map the fs root folder to the package_id of the new forums pkg
             attachments::map_root_folder \
                 -package_id $package_id \
-                -folder_id [fs::get_root_folder -package_id $fs_package_id] 
-            
+                -folder_id [fs::get_root_folder -package_id $fs_package_id]
+
         } else {
             ns_log Warning "DOTLRN-FORUMS: Warning attachments or dotlrn-fs not found!"
         }
-        
+
         set auto_create_forum_p [parameter::get_from_package_key \
             -package_key [my_package_key] \
             -parameter auto_create_forum_p \
@@ -334,15 +334,15 @@ namespace eval dotlrn_forums {
         event
         old_value
         new_value
-    } { 
+    } {
         listens for the following events: rename
-    } { 
+    } {
         switch $event {
             rename {
                 handle_rename -community_id $community_id -old_value $old_value -new_value $new_value
             }
         }
-    }   
+    }
 
     ad_proc -private handle_rename {
         {-community_id:required}
