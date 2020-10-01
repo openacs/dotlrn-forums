@@ -81,7 +81,13 @@ namespace eval dotlrn_forums {
     } {
         Remove the applet from dotlrn
     } {
-        dotlrn_applet::remove_applet_from_dotlrn -applet_key [applet_key]
+        db_transaction {
+            set package_url [site_node::get_package_url -package_key [my_package_key]]
+            if { $package_url ne "" } {
+                site_node::unmount -node_id [site_node::get_node_id -url $package_url]
+            }
+            dotlrn_applet::remove_applet_from_dotlrn -applet_key [applet_key]
+        }
     }
 
     ad_proc -public add_applet_to_community {
