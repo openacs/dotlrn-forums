@@ -93,7 +93,7 @@ aa_register_case -procs {
                 # Remove the applet in advance, if it already exists
                 #
                 dotlrn_forums::remove_applet
-                aa_log "Removed existing applet"
+                aa_true "Removed existing applet" "[expr {[dotlrn_applet::get_applet_id_from_key -applet_key $applet_key] eq ""}]"
             }
             #
             # Add applet
