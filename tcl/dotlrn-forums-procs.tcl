@@ -228,9 +228,10 @@ namespace eval dotlrn_forums {
         ns_set put $args package_id $package_id
         ns_set put $args param_action append
 
-        # don't use the cached version
+        # Avoid a stale cache
+        ::dotlrn::dotlrn_user_cache flush -partition_key $user_id $user_id-portal_id
         dotlrn_forums::add_portlet_helper \
-            [dotlrn::get_portal_id_not_cached -user_id $user_id] \
+            [dotlrn::get_portal_id -user_id $user_id] \
             $args
 
         dotlrn_forums::add_portlet_helper $portal_id $args
