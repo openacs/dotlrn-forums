@@ -47,6 +47,7 @@ aa_register_case -procs {
         dotlrn_forums::add_portlet_helper
         dotlrn_forums::remove_portlet
         dotlrn_forums::remove_applet
+        portal::exists_p
     } -cats {
         api
     } dotlrn_forums__applet_portlet {
@@ -80,10 +81,7 @@ aa_register_case -procs {
         # Create portal
         #
         set portal_id [portal::create $portal_user_id]
-        set portal_exists_p [db_0or1row foo {
-            select * from portals where portal_id=:portal_id
-        }]
-        if {$portal_exists_p} {
+        if {[portal::exists_p $portal_id]} {
             aa_log "Portal created (portal_id: $portal_id)"
             set applet_key [dotlrn_forums::applet_key]
             #
