@@ -5,7 +5,7 @@
 <p>
   #dotlrn-forums.Posting_history_for#
   <strong>
-    <if @useScreenNameP@>@screen_name@</if>
+    <if @useScreenNameP;literal@ true>@screen_name@</if>
     <else>
       <%
         if {![permission::permission_p -object_id [acs_magic_object security_context_root] -privilege admin]} {
