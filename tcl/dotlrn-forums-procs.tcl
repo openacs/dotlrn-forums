@@ -309,7 +309,7 @@ namespace eval dotlrn_forums {
         args
     } {
         This does the call to add the portlet to the given portal.
-        Params for the portlet are set by the calllers.
+        Params for the portlet are set by the callers.
 
         @param portal_id
         @param args An ns_set of params
