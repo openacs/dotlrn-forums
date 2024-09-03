@@ -3,13 +3,20 @@
 
   <msg key="administer">amministra</msg>
   <msg key="All_forums">Tutti i forums</msg>
+  <msg key="all_Forums">Tutti i Forum</msg>
   <msg key="Auto_subscribe_label">Sottoscrizione automatica per i membri del gruppo</msg>
+  <msg key="autosubscribe_members">Iscrivi automaticamente i membri a %forums.name%</msg>
   <msg key="by_Date">per Data</msg>
   <msg key="by_Forum">per Forum</msg>
+  <msg key="Create_New_Forum">Crea un nuovo forum</msg>
+  <msg key="display_all_forums">Mostra tutti i forum</msg>
+  <msg key="do_not_autosubscribe_members">Non iscrivere automaticamente i membri a %forums.name%</msg>
   <msg key="Forum">Forum</msg>
   <msg key="forums_default_name_suffix">Forum</msg>
+  <msg key="goto_forums_admin">Vai all&#39;amministrazione forum</msg>
+  <msg key="goto_forums_name">Vai a %forums.name%</msg>
   <msg key="lt_Forums_Posting_histor">Forum: Elenco dei messggi per %user.full_name%</msg>
-  <msg key="lt_There_should_be_only_">Ci dovrebbe essere un'unica istanza di forum per scopi amministrativi</msg>
+  <msg key="lt_There_should_be_only_">Ci dovrebbe essere un&#39;unica istanza di forum per scopi amministrativi</msg>
   <msg key="New_Forum">Nuovo Forum</msg>
   <msg key="No_Postings">Nessun invio.</msg>
   <msg key="Posted">Invitato</msg>

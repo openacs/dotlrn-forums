@@ -79,9 +79,22 @@ namespace eval dotlrn_forums {
 
     ad_proc -public remove_applet {
     } {
-        remove the applet from dotlrn
+        Remove the applet from dotlrn
     } {
-        ad_return_complaint 1 "[applet_key] remove_applet not implemented!"
+        db_transaction {
+            set package_key [my_package_key]
+            if {[db_0or1row get_node_id {
+                select min(node_id) as node_id
+                from site_nodes n,
+                     apm_packages p
+                where p.package_key = :package_key
+                  and p.package_id = n.object_id
+            }]} {
+                site_node::unmount -node_id $node_id
+                site_node::delete -node_id $node_id
+            }
+            dotlrn_applet::remove_applet_from_dotlrn -applet_key [applet_key]
+        }
     }
 
     ad_proc -public add_applet_to_community {
@@ -97,7 +110,7 @@ namespace eval dotlrn_forums {
         ]
 
         # mount attachments under forums, if available
-        # attachments requires that dotlrn-fs is already mounted 
+        # attachments requires that dotlrn-fs is already mounted
         if {[apm_package_registered_p attachments]
             && [dotlrn_community::applet_active_p \
                     -community_id $community_id \
@@ -118,16 +131,16 @@ namespace eval dotlrn_forums {
                  -community_id $community_id \
                  -applet_key [dotlrn_fs::applet_key]
             ]
-                                     
+
             # map the fs root folder to the package_id of the new forums pkg
             attachments::map_root_folder \
                 -package_id $package_id \
-                -folder_id [fs::get_root_folder -package_id $fs_package_id] 
-            
+                -folder_id [fs::get_root_folder -package_id $fs_package_id]
+
         } else {
             ns_log Warning "DOTLRN-FORUMS: Warning attachments or dotlrn-fs not found!"
         }
-        
+
         set auto_create_forum_p [parameter::get_from_package_key \
             -package_key [my_package_key] \
             -parameter auto_create_forum_p \
@@ -185,7 +198,7 @@ namespace eval dotlrn_forums {
         ad_return_complaint 1 "[applet_key] remove_applet_from_community not implemented!"
     }
 
-    ad_proc -public add_user {
+    ad_proc -private add_user {
         user_id
     } {
         Called when the user is initially added as a dotlrn user.
@@ -193,7 +206,7 @@ namespace eval dotlrn_forums {
     } {
     }
 
-    ad_proc -public remove_user {
+    ad_proc -private remove_user {
         user_id
     } {
         called when a user is removed from dotlrn.
@@ -215,9 +228,10 @@ namespace eval dotlrn_forums {
         ns_set put $args package_id $package_id
         ns_set put $args param_action append
 
-        # don't use the cached version
+        # Avoid a stale cache
+        ::dotlrn::dotlrn_user_cache flush -partition_key $user_id $user_id-portal_id
         dotlrn_forums::add_portlet_helper \
-            [dotlrn::get_portal_id_not_cached -user_id $user_id] \
+            [dotlrn::get_portal_id -user_id $user_id] \
             $args
 
         dotlrn_forums::add_portlet_helper $portal_id $args
@@ -225,8 +239,8 @@ namespace eval dotlrn_forums {
         # Set up notifications for all the forums that have set for autosubscription
 
         set type_id [notification::type::get_type_id -short_name forums_forum_notif]
-        set interval_id [notification::get_interval_id -name instant]
-        set delivery_method_id [notification::get_delivery_method_id -name email]
+        set interval_id [notification::interval::get_id_from_name -name instant]
+        set delivery_method_id [notification::delivery::get_id -short_name email]
 
         foreach forum_id [db_list select_forums {}] {
             notification::request::new \
@@ -295,7 +309,7 @@ namespace eval dotlrn_forums {
         args
     } {
         This does the call to add the portlet to the given portal.
-        Params for the portlet are set by the calllers.
+        Params for the portlet are set by the callers.
 
         @param portal_id
         @param args An ns_set of params
@@ -334,15 +348,15 @@ namespace eval dotlrn_forums {
         event
         old_value
         new_value
-    } { 
+    } {
         listens for the following events: rename
-    } { 
+    } {
         switch $event {
             rename {
                 handle_rename -community_id $community_id -old_value $old_value -new_value $new_value
             }
         }
-    }   
+    }
 
     ad_proc -private handle_rename {
         {-community_id:required}
